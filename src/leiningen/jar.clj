@@ -202,5 +202,6 @@ function in that namespace will be used as the main-class for executable jar."
                deps-fileset (deps project true)]
            (write-jar project jar-path (filespecs project deps-fileset))
            (println "Created" jar-path)
+           (deps project)
            jar-path))))
   ([project] (jar project (get-default-jar-name project))))
